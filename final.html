@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cake Bakery</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="final.css">
+<script src="final.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">The Cake</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-website">About Website</a></li>
+            <li><a href="#history">History of Cake</a></li>
+            <li><a href="#all-products">All Products</a></li>
+            <li><a href="#for-events">For Events</a></li>
+            <li><a href="#site-map">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO / BANNER -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span>The Cake Bakery</span></h1>
+        <p>Because every celebration deserves sweetness</p>
+        <a href="#all-products" class="btn">Explore Our Cakes</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="wedding.jfif" alt="Cake">
+    </div>
+</section>
+
+<!-- WEBSITE DESCRIPTION -->
+<section id="about-website" class="info-section">
+    <h2>About This Website</h2>
+    <p>
+        The Cake is an informative and interactive bakery website designed to showcase a wide variety of cakes for every occasion.
+        The website helps users explore cake categories, compare prices, view designs, and place orders easily.
+        It serves as a complete online guide for customers looking for quality cakes for celebrations.
+    </p>
+</section>
+
+<!-- HISTORY OF CAKE -->
+<section id="history" class="info-section">
+    <h2>Brief History of Cake</h2>
+    <p>
+        Cakes date back to ancient civilizations, where early versions were made from bread sweetened with honey.
+        The Egyptians were among the first to use baking techniques, while the Romans introduced eggs and butter
+        into cake recipes. Over time, cakes evolved into a symbol of celebration and joy. Today, cakes are available
+        in countless flavors and designs, making them an essential part of birthdays, weddings, and special occasions.
+    </p>
+</section>
+
+<!-- Vision, Mission and Foundation -->
+<section id="about-us">
+    <h2 class="about-heading">About Us</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Foundation</h3>
+            <p>
+                The Cake was founded with the belief that cakes are more than just desserts — they are a part of people’s
+                happiest moments. Built on a passion for baking and a commitment to quality, our foundation is rooted in
+                fresh ingredients, skilled craftsmanship, and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="grid-item">
+            <h3>Mission</h3>
+            <p>
+                Our mission is to create delicious, high-quality cakes that bring joy to every celebration.
+                We aim to provide a wide variety of cakes at affordable prices while ensuring consistent quality
+                and reliable service.
+            </p>
+        </div>
+
+        <div class="grid-item">
+            <h3>Vision</h3>
+            <p>
+                Our vision is to become one of the most trusted cake brands by continuously innovating,
+                maintaining excellence in taste and design, and spreading happiness through every cake we bake.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- all products -->
+<h2 id="all-products" class="h2-daily">Daily Available Cakes: Same-Day Delivery</h2>
+
+<div class="pro-container">
+
+    <div class="cake-card">
+        <img src="cheesecake.jfif" alt="Cheese Cake">
+
+        <h3>Cheese Cake</h3>
+
+        <p class="code">Item Code: DC-001</p>
+        <p class="egg">Egg Type: With Egg</p>
+
+        <p class="desc">
+            A rich and creamy classic made with smooth cream cheese on a buttery biscuit base.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('cheesecake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="RedVelvetcake.jfif" alt="Red Velvet Cake">
+
+        <h3>Red Velvet Cake</h3>
+
+        <p class="code">Item Code: DC-002</p>
+        <p class="egg">Egg Type: With Egg</p>
+
+        <p class="desc">
+            A classic red velvet sponge paired with creamy frosting.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('RedVelvetcake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="RoseGoldCake.jfif" alt="Rose Gold Cake">
+
+        <h3>Rose Gold Cake</h3>
+
+        <p class="code">Item Code: DC-003</p>
+        <p class="egg">Egg Type: Eggless</p>
+
+        <p class="desc">
+            Soft, elegant cake with a rich and smooth finish.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('RoseGoldCake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="CaramelCrunchCake.jfif" alt="Caramel Cruch Cake">
+
+        <h3>Caramel Cruch Cake</h3>
+
+        <p class="code">Item Code: DC-004</p>
+        <p class="egg">Egg Type: Eggless</p>
+
+        <p class="desc">
+            Moist cake layered with caramel and crunchy bits.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('CaramelCrunchCake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="nakedlemoncake.jfif" alt="Naked Lemon cake">
+
+        <h3>Naked Lemon cake</h3>
+
+        <p class="code">Item Code: DC-005</p>
+        <p class="egg">Egg Type: With Egg</p>
+
+        <p class="desc">
+            Light lemon cake with a fresh citrus taste.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('nakedlemoncake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card"> 
+        <img src="DutchTruffleCake.jfif" alt="Dutch Truffle Cake">
+
+        <h3>Dutch Truffle Cake</h3>
+
+        <p class="code">Item Code: DC-006</p>
+        <p class="egg">Egg Type: Eggless</p>
+
+        <p class="desc">
+            Rich chocolate cake with smooth truffle frosting.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('DutchTruffleCake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="velvelcocoaindulgence.jfif" alt="Velvel Cocoa Indulgence Cake">
+
+        <h3>Velvel Cocoa Indulgence Cake</h3>
+
+        <p class="code">Item Code: DC-007</p>
+        <p class="egg">Egg Type: Eggless</p>
+
+        <p class="desc">
+            Deep cocoa cake with a velvety texture.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('velvelcocoaindulgence.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <div class="cake-card">
+        <img src="madagscarvanillabeancake.jfif" alt="Madagascar Vanilla Bean Cake">
+
+        <h3>Caramel Cruch Cake</h3>
+
+        <p class="code">Item Code: DC-008</p>
+        <p class="egg">Egg Type: With Egg</p>
+
+        <p class="desc">
+            Smooth vanilla cake with a rich aroma.
+        </p>
+
+        <p class="price">Price: PKR 3,000</p>
+
+        <button class="zoom-btn" onclick="zoomImage('madagscarvanillabeancake.jfif')">Zoom</button>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+</div>
+
+<!-- Products By events -->
+<h2 id="for-events" class="occ-heading">Customized Cakes: Order in Advance</h2>
+
+<div class="category-container">
+
+<!-- Birthday -->
+<div class="category-card">
+    <img src="birthday.jfif">
+    <h3>Birthday Cakes</h3>
+    <a href="birthday-individual.html" class="arrow-btn">➜</a>
+</div>
+
+<!-- Anniversary -->
+<div class="category-card">
+    <img src="anniversary.jfif">
+    <h3>Anniversary Cakes</h3>
+    <a href="anniversary-individual.html" class="arrow-btn">➜</a>
+</div>
+
+<!-- Wedding -->
+<div class="category-card">
+    <img src="wedding0.1.jfif">
+    <h3>Wedding Cakes</h3>
+    <a href="wedding-individual.html" class="arrow-btn">➜</a>
+</div>
+
+<!-- Engagement -->
+<div class="category-card">
+    <img src="engagement.jfif">
+    <h3>Engagement Party Cakes</h3>
+    <a href="engagement-individual.html" class="arrow-btn">➜</a>
+</div>
+
+<!-- Baby Shower Cakes -->
+<div class="category-card">
+    <img src="baby.jfif">
+    <h3>Baby Shower Cakes</h3>
+    <a href="baby-shower-individual.html" class="arrow-btn">➜</a>
+</div>
+
+<!-- Graduation Party Cakes -->
+<div class="category-card">
+    <img src="graduation.jfif">
+    <h3>Graduation Party Cakes</h3>
+    <a href="graduation-individual.html" class="arrow-btn">➜</a>
+</div>
+</div>
+
+<!-- Site Map -->
+<section id="site-map" class="sitemap-section">
+    <h2>Site Map</h2>
+    <p class="sitemap-subtitle">Visual representation of website navigation</p>
+
+    <div class="sitemap-container">
+
+        <div class="sitemap-box">
+            <a href="#home">Home</a>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#about-us">About Us</a>
+            <div class="sitemap-sub">
+                <a href="#foundation">Foundation</a>
+                <a href="#mission">Mission</a>
+                <a href="#vision">Vision</a>
+            </div>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#all-products">All Products</a>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#for-events">Products by Event</a>
+            <div class="sitemap-sub">
+                <a href="#birthday">Birthday</a>
+                <a href="#anniversary">Anniversary</a>
+                <a href="#wedding">Wedding</a>
+            </div>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#how-to-order">How to Order</a>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#create-account">Create Account</a>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <div class="sitemap-box">
+            <a href="#disclaimer">Disclaimer</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact US -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-subtitle">We’d love to hear from you!</p>
+
+    <div class="contact-container">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Sweet Street, Cake Town</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+
+            <!-- Mailto link -->
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:hello@thecakebakery.com">
+                    hello@thecakebakery.com
+                </a>
+            </p>
+
+            <!-- Google Map -->
+            <iframe 
+                src="https://www.google.com/maps?q=123%20Sweet%20Street&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="200"
+                style="border:0; border-radius:10px;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+
+<!-- Create An Acoount -->
+<section id="create-account">
+<div class="main-container">
+
+    <div class="ca-container">
+
+        <div class="left">
+            <img src="download.jfif" alt="Account Image">
+        </div>
+
+        <div class="right">
+            <h2>Let’s sign you in</h2>
+            <p>Hello! Welcome back to your account.</p>
+
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+
+                <div class="forgot">Forgot password?</div>
+
+                <button type="submit" class="login-btn">Sign in now</button>
+            </form>
+
+            <div class="divider">or sign in with</div>
+
+            <button class="google-btn">G&nbsp; Google</button>
+
+            <div class="register">
+                Don’t have an account? <span>Create an account</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- Dummy Procedure -->
+<section id="how-to-order" class="order-section">
+    <h2>How to Order</h2>
+    <p class="order-subtitle">Simple steps to place your cake order</p>
+
+    <div class="order-steps">
+
+        <div class="order-card">
+            <h3>Step 1</h3>
+            <p>Select your preferred cake from the product or event category.</p>
+        </div>
+
+        <div class="order-card">
+            <h3>Step 2</h3>
+            <p>Click the <strong>Order</strong> or <strong>Add to Cart</strong> button.</p>
+        </div>
+
+        <div class="order-card">
+            <h3>Step 3</h3>
+            <p>Fill in delivery details such as address, date, and message.</p>
+        </div>
+
+        <div class="order-card">
+            <h3>Step 4</h3>
+            <p>Review your order summary and confirm your order.</p>
+        </div>
+
+        <div class="order-card">
+            <h3>Step 5</h3>
+            <p>Order is placed successfully and delivered on your selected date.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Disclaimer</h4>
+            <p>
+                All images, content, and designs on this website are for demonstration purposes only.
+                No real transactions are processed. Prices, availability, and products may not reflect real-world data.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Sweet Street, Cake Town</p>
+            <p>Email: <a href="mailto:hello@thecakebakery.com">hello@thecakebakery.com</a></p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <p>
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 The Cake Bakery. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

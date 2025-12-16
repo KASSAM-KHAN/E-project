@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding Cakes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #c3d6fe;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 40px 0;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.0rem;
+            text-decoration: underline;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 0 60px 60px;
+        }
+
+        .product-card {
+            margin-left: 50px;
+            width: 300px;
+            height: 470px;
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            font-family: Arial;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 95%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card p {
+            margin: 6px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-card button {
+            padding: 6px 10px;
+            margin: 5px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function zoomImage(src) {
+            window.open(src, "_blank", "width=700,height=700");
+        }
+
+        function orderNow() {
+            alert("Wedding cake order placed (Demo)");
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Wedding Cakes Collection</h2>
+
+<div class="products">
+
+    <div class="product-card">
+        <img src="wedding 1.jfif">
+        <p>Classic Tiered Wedding Cake</p>
+        <p>Code: WC301</p>
+        <p>Price: PKR 12,000</p>
+        <button onclick="zoomImage('wedding 1.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+    <div class="product-card">
+        <img src="wedding 2.jfif">
+        <p>Floral Wedding Cake</p>
+        <p>Code: WC302</p>
+        <p>Price: PKR 14,000</p>
+        <button onclick="zoomImage('wedding 2.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+    <div class="product-card">
+        <img src="wedding 3.jfif">
+        <p>Minimal White Wedding Cake</p>
+        <p>Code: WC303</p>
+        <p>Price: PKR 11,500</p>
+        <button onclick="zoomImage('wedding 3.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+    <div class="product-card">
+        <img src="wedding 4.jfif">
+        <p>Gold Accent Wedding Cake</p>
+        <p>Code: WC304</p>
+        <p>Price: PKR 15,000</p>
+        <button onclick="zoomImage('wedding 4.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+    <div class="product-card">
+        <img src="wedding 5.jfif">
+        <p>Royal Multi-tier Wedding Cake</p>
+        <p>Code: WC305</p>
+        <p>Price: PKR 18,000</p>
+        <button onclick="zoomImage('wedding 5.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+    <div class="product-card">
+        <img src="wedding 6.jfif">
+        <p>Floral Pastel Wedding Cake</p>
+        <p>Code: WC306</p>
+        <p>Price: PKR 20,000</p>
+        <button onclick="zoomImage('wedding 6.jfif')">Zoom</button>
+        <button onclick="orderNow()">Order</button>
+    </div>
+
+</div>
+
+</body>
+</html>
