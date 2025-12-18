@@ -1,46 +1,118 @@
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    background-color: aliceblue;
+    background-color: #F9F7F2;
 }
 
-/* NAVBAR */
 .navbar {
-    background-color: aliceblue;
+    background-color: #F9F7F2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0; 
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.4s ease-in-out; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+
+.navbar-hidden {
+    transform: translateY(-110%);
 }
 
 .logo {
     font-family: 'Pacifico', cursive;
     font-size: 1.8rem;
+    color: #6D214F;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: #2F3640;
     font-weight: 500;
 }
 
-/* HERO BANNER */
+.hero {
+    position: relative;
+    height: 80vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; 
+}
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-carousel .carousel-inner, 
+.hero-carousel .carousel-item {
+    height: 100%;
+}
+
+.hero-carousel img {
+    height: 100%;
+    object-fit: cover; 
+}
+
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 90px 40px;
-    gap: 60px;
-    background: linear-gradient(to bottom right, #3da6cf, #c4d0f4);
+    min-height: 70vh; 
+    background: linear-gradient(to bottom right, #6D214F, #D4A5A5);
+    padding: 60px; 
+}
+
+.hero-frame {
+    width: 100%;
+    max-width: 500px; 
+    height: 500px;    
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.hero-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 60px; 
+    gap: 80px; 
+    background: linear-gradient(to bottom right, #6D214F, #D4A5A5);
+    min-height: 85vh;
 }
 
 .hero-content {
@@ -49,29 +121,66 @@ body {
 
 .hero h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 2.6rem;
+    font-size: 3rem;
+    color: #F9F7F2;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: #F9F7F2;
+    margin-bottom: 25px;
+}
+
+.hero-carousel-frame {
+    width: 400px;     
+    height: 450px;     
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background-color: #fff; 
+}
+
+.hero-carousel-frame .carousel-inner, 
+.hero-carousel-frame .carousel-item {
+    height: 100%;
+}
+
+.hero-carousel-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: aliceblue;
-    color: black;
+    padding: 12px 30px;
+    background-color: #F9F7F2;
+    color: #6D214F;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
-.hero-image img {
-    width: 320px;
-    border-radius: 20px;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* INFO SECTIONS */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .hero-carousel-frame {
+        width: 300px;
+        height: 350px;
+    }
+}
+
 .info-section {
     padding: 70px 100px;
     text-align: center;
@@ -80,6 +189,7 @@ body {
 .info-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #6D214F;
 }
 
 .info-section p {
@@ -87,12 +197,12 @@ body {
     margin: auto;
     line-height: 1.7;
     font-size: 1rem;
+    color: #3E2723;
 }
 
-/* ABOUT US SECTION */
 #about-us {
     padding: 80px 60px;
-    background-color: aliceblue;
+    background-color: #F9F7F2;
 }
 
 .about-heading {
@@ -100,20 +210,19 @@ body {
     font-family: 'Pacifico', cursive;
     font-size: 2.3rem;
     margin-bottom: 50px;
+    color: #6D214F;
 }
 
-/* GRID LAYOUT */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-/* GRID ITEMS */
 .grid-item {
-    background-color: rgb(155, 188, 218);
-    border: 2px double rgb(10, 54, 93);
-    color: rgb(0, 32, 60);
+    background-color: #D4A5A5;
+    border: 2px double #6D214F;
+    color: #2F3640;
     padding: 25px;
     font-size: 16px;
     border-radius: 12px;
@@ -121,16 +230,22 @@ body {
     transition: 0.3s ease;
 }
 
-/* Hover effect (safe) */
 .grid-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Headings */
 .grid-item h3 {
     text-decoration: underline;
     margin-bottom: 15px;
+    color: #6D214F;
+}
+
+.h2-daily {
+    text-align: center;
+    margin: 60px 0 30px;
+    font-size: 28px;
+    color: #6D214F;
 }
 
 .pro-container {
@@ -143,7 +258,7 @@ body {
 
 .cake-card {
     width: 260px;
-    border: 1px solid #ccc;
+    border: 1px solid #D4A5A5;
     padding: 15px;
     text-align: center;
     background-color: white;
@@ -161,17 +276,18 @@ body {
 .code, .egg {
     font-size: 13px;
     font-weight: bold;
-    color: #333;
+    color: #3E2723;
 }
 
 .desc {
     font-size: 14px;
-    color: #555;
+    color: #2F3640;
 }
 
 .price {
     font-weight: bold;
     margin: 8px 0;
+    color: #6D214F;
 }
 
 .zoom-btn, .order-btn {
@@ -183,21 +299,22 @@ body {
 }
 
 .zoom-btn {
-    background-color: #ddd;
+    background-color: #D4A5A5;
+    color: #2F3640;
 }
 
 .order-btn {
-    background-color: #3da6cf;
+    background-color: #6D214F;
     color: white;
 }
-/* Heading */
+
 .occ-heading {
     text-align: center;
     margin: 60px 0 30px;
     font-size: 28px;
+    color: #6D214F;
 }
 
-/* Category Section */
 .category-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -210,18 +327,18 @@ body {
     display: inline-block;
     font-size: 22px;
     text-decoration: none;
-    color: black;
+    color: #2F3640;
     cursor: pointer;
 }
 
-/* Category Card */
 .category-card {
     width: 350px;
-    height: 450px;
+    height: 500px;
     padding: 15px;
     text-align: center;
     border-radius: 10px;
     font-family: Arial;
+    background-color: #D4A5A5;
 }
 
 .category-card img {
@@ -233,6 +350,7 @@ body {
 
 .category-card h3 {
     margin: 15px 0 5px;
+    color: #6D214F;
 }
 
 .category-card button {
@@ -240,28 +358,28 @@ body {
     border: none;
     font-size: 22px;
     cursor: pointer;
+    color: #2F3640;
 }
 
 .sitemap-section {
     padding: 80px 40px;
     text-align: center;
-    background: linear-gradient(to bottom, #eef6ff, #ffffff);
+    background: linear-gradient(to bottom, #F9F7F2, #ffffff);
 }
 
 .sitemap-section h2 {
     font-family: 'Pacifico', cursive;
     font-size: 2.2rem;
     margin-bottom: 8px;
-    color: #1750a5;
+    color: #6D214F;
 }
 
 .sitemap-subtitle {
     margin-bottom: 50px;
-    color: #555;
+    color: #2F3640;
     font-size: 15px;
 }
 
-/* Main layout */
 .sitemap-container {
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +387,6 @@ body {
     gap: 35px;
 }
 
-/* Main boxes */
 .sitemap-box {
     background: white;
     padding: 18px 22px;
@@ -283,35 +400,32 @@ body {
     transform: translateY(-6px);
 }
 
-/* Main links */
 .sitemap-box > a {
     text-decoration: none;
-    color: #1750a5;
+    color: #6D214F;
     font-weight: 600;
     font-size: 16px;
     display: block;
     margin-bottom: 8px;
 }
 
-/* Sub-links container */
 .sitemap-sub {
     margin-top: 12px;
     padding-top: 10px;
-    border-top: 1px dashed #c7d9f3;
+    border-top: 1px dashed #D4A5A5;
 }
 
-/* Sub-links */
 .sitemap-sub a {
     display: block;
     text-decoration: none;
-    color: #555;
+    color: #3E2723;
     font-size: 14px;
     margin: 6px 0;
     transition: 0.2s;
 }
 
 .sitemap-sub a:hover {
-    color: #1750a5;
+    color: #6D214F;
     font-weight: 500;
 }
 
@@ -324,10 +438,12 @@ body {
 .contact h2 {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
+    color: #6D214F;
 }
 
 .contact-subtitle {
     margin-bottom: 40px;
+    color: #2F3640;
 }
 
 .contact-container {
@@ -337,7 +453,7 @@ body {
     gap: 40px;
     max-width: 900px;
     margin: auto;
-    background-color: aliceblue;
+    background-color: #F9F7F2;
     border-radius: 16px;
     padding: 40px;
 }
@@ -348,7 +464,7 @@ body {
 }
 
 .contact-info a {
-    color: rgb(65, 133, 193);
+    color: #6D214F;
     text-decoration: none;
     font-weight: bold;
 }
@@ -368,21 +484,22 @@ body {
 .contact-form textarea {
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid rgb(65, 133, 193);
+    border: 2px solid #D4A5A5;
 }
 
 .contact-form button {
-    background-color: rgb(65, 133, 193);
+    background-color: #6D214F;
     border: none;
     border-radius: 25px;
     padding: 10px;
     cursor: pointer;
+    color: white;
 }
 
 .main-container {
     height: 700px;
     width: 100%;
-    background: linear-gradient(135deg, #87c5ff, #3a8df3);
+    background: linear-gradient(135deg, #6D214F, #D4A5A5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,7 +508,7 @@ body {
 .ca-container {
     height: 530px;
     width: 800px;
-    background-color: aliceblue;
+    background-color: #F9F7F2;
     border-radius: 20px;
     display: flex;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -400,7 +517,7 @@ body {
 
 .left {
     width: 50%;
-    background: linear-gradient(180deg, #d9efff, #d1edff);
+    background: linear-gradient(180deg, #D4A5A5, #6D214F);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,11 +535,11 @@ body {
 }
 
 .right h2 {
-    color: #1750a5;
+    color: #6D214F;
 }
 
 .right p {
-    color: #708bb1;
+    color: #2F3640;
     margin-bottom: 25px;
 }
 
@@ -432,13 +549,13 @@ body {
     margin-bottom: 15px;
     border-radius: 8px;
     border: none;
-    background: #dceeff;
+    background: #F9F7F2;
     outline: none;
 }
 
 .forgot {
     font-size: 13px;
-    color: #3997ea;
+    color: #2F3640;
     text-align: right;
     margin-bottom: 20px;
     cursor: pointer;
@@ -449,7 +566,7 @@ body {
     padding: 12px;
     border-radius: 10px;
     border: none;
-    background: #001255;
+    background: #6D214F;
     color: white;
     cursor: pointer;
 }
@@ -457,17 +574,18 @@ body {
 .divider {
     text-align: center;
     margin: 20px 0;
-    color: #888;
+    color: #2F3640;
 }
 
 .google-btn {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #D4A5A5;
     background: white;
     cursor: pointer;
     font-weight: bold;
+    color: #2F3640;
 }
 
 .register {
@@ -476,13 +594,13 @@ body {
 }
 
 .register span {
-    color: #2c87ff;
+    color: #6D214F;
     font-weight: bold;
     cursor: pointer;
 }
 
 .order-section {
-    background-color: aliceblue;
+    background-color: #F9F7F2;
     padding: 80px 40px;
     text-align: center;
 }
@@ -491,11 +609,12 @@ body {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #6D214F;
 }
 
 .order-subtitle {
     margin-bottom: 40px;
-    color: #333;
+    color: #3E2723;
 }
 
 .order-steps {
@@ -519,8 +638,8 @@ body {
 }
 
 .site-footer {
-    background: linear-gradient(135deg, #87c5ff, #3a8df3);
-    color: #ffffff;
+    background: linear-gradient(135deg, #6D214F, #D4A5A5);
+    color: #F9F7F2;
     padding: 50px 20px 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -542,20 +661,20 @@ body {
 .footer-section h4 {
     margin-bottom: 12px;
     font-size: 18px;
-    color: #ffd700;
+    color: #F9F7F2;
 }
 
 .footer-section p,
 .footer-section a {
     font-size: 14px;
-    color: #ffffff;
+    color: #F9F7F2;
     text-decoration: none;
     line-height: 1.6;
 }
 
 .footer-section a:hover {
     text-decoration: underline;
-    color: #ffd700;
+    color: #2F3640;
 }
 
 .footer-bottom {
@@ -564,5 +683,5 @@ body {
     font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.3);
     padding-top: 15px;
-    color: #ddd;
+    color: #F9F7F2;
 }
