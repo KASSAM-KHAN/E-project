@@ -290,23 +290,81 @@ body {
     color: #6D214F;
 }
 
-.zoom-btn, .order-btn {
+.order-btn {
     padding: 8px 14px;
     margin: 5px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     cursor: pointer;
+    background-color: #6D214F;
+    color: white;
+    transition: 0.3s;
 }
 
-.zoom-btn {
+.order-btn:hover {
     background-color: #D4A5A5;
+}
+
+/* modal */
+/* Style for the "Details" button on the card */
+.btn-details {
+    background-color: #6D214F;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #D4A5A5;
+}
+
+/* Modal Styling */
+.custom-modal {
+    background-color: #F9F7F2; /* Matching your navbar/background */
+    border-radius: 20px;
+    border: none;
+}
+
+.modal-cake-title {
+    font-family: 'Pacifico', cursive;
+    color: #6D214F;
+    font-size: 2rem;
+}
+
+.modal-price {
+    font-weight: bold;
+    font-size: 1.2rem;
     color: #2F3640;
 }
 
-.order-btn {
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.add-to-cart-modal {
+    width: 100%;
+    padding: 12px;
     background-color: #6D214F;
     color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
 }
+
+.add-to-cart-modal:hover {
+    background-color: #4b1636;
+}
+/* modal */
 
 .occ-heading {
     text-align: center;
@@ -429,71 +487,145 @@ body {
     font-weight: 500;
 }
 
-.contact {
-    background-color: white;
-    text-align: center;
-    padding: 80px 40px;
-}
-
-.contact h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    color: #6D214F;
-}
-
-.contact-subtitle {
-    margin-bottom: 40px;
+/* CONTACT SECTION - Boutique Minimalist */
+.contact-modern {
+    padding: 120px 0;
+    background-color: #F9F7F2; /* Pearl Page Background */
     color: #2F3640;
 }
 
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: auto;
-    background-color: #F9F7F2;
-    border-radius: 16px;
-    padding: 40px;
+.container {
+    /* ORGANIZATION & ALIGNMENT */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 80px; /* Increased padding for a spacious feel */
+    
+    /* THE "CARD" STYLING */
+    background-color:#D4A5A5; /* Pure white to pop against the pearl background */
+    border: #6D214F solid 1px; /* Thin, elegant Plum border */
+    border-radius: 20px; /* Soft, modern rounded corners */
+    
+    /* DEPTH */
+    box-shadow: 0 15px 35px rgba(109, 33, 79, 0.05); /* Very light plum-tinted shadow */
 }
 
-.contact-info {
-    text-align: left;
-    width: 300px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center; /* Centered vertically for better organization */
 }
 
-.contact-info a {
+/* TYPOGRAPHY */
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: #4b1636 ;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-branding h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #2F3640;
+}
+
+.contact-branding h2 span {
+    font-family: 'Pacifico', cursive;
     color: #6D214F;
+}
+
+.contact-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #57606f;
+    margin-bottom: 40px;
+}
+
+/* DETAILS SECTION */
+.detail-line {
+    margin-bottom: 25px;
+}
+
+.detail-line label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4b1636;
+    margin-bottom: 5px;
+}
+
+.detail-line p, .detail-line a {
+    font-size: 1.1rem;
+    color: #2F3640;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+
+
+/* FORM STYLING */
+.boutique-form .form-row {
+    margin-bottom: 30px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 300px;
+.boutique-form input, 
+.boutique-form textarea {
+    width: 100%;
+    background: #fdfcf9; /* Very slight tint for inputs */
+    border: 1px solid rgba(212, 165, 165, 0.3); /* Soft border instead of just a line */
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+    border: #4b1636 1px solid;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #D4A5A5;
+.boutique-form input:focus, 
+.boutique-form textarea:focus {
+    border-color: #6D214F;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(109, 33, 79, 0.05);
 }
 
-.contact-form button {
+/* BUTTON */
+.btn-minimal {
     background-color: #6D214F;
+    color: #fff;
     border: none;
-    border-radius: 25px;
-    padding: 10px;
+    padding: 16px 0;
+    width: 100%; /* Full width button looks very organized in grids */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 8px;
     cursor: pointer;
-    color: white;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-minimal:hover {
+    background-color: #4b1636;
+    transform: translateY(-2px);
+}
+
+/* MOBILE VIEW */
+@media (max-width: 900px) {
+    .container {
+        padding: 40px 25px;
+        margin: 0 15px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .contact-branding h2 { font-size: 2.2rem; }
 }
 
 .main-container {
